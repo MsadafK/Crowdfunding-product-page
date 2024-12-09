@@ -1,0 +1,613 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Commissioner", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-size: initial;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+  position: relative;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 17.5rem;
+}
+.header__background-image {
+  width: 100%;
+  display: block;
+}
+.header__icons-and-navbar-container {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  z-index: 2;
+}
+.header__icons-and-navbar-container__logo-and-hamburgur-icons-container {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__icons-and-navbar-container__logo-and-hamburgur-icons-container__hamburger-icon, .header__icons-and-navbar-container__logo-and-hamburgur-icons-container__close-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.header__icons-and-navbar-container__navbar {
+  position: absolute;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 1rem 0;
+  display: none;
+}
+.header__icons-and-navbar-container__navbar__list > *:nth-last-child(2) {
+  border-top: 1px solid hsl(0, 0%, 90%);
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+.header__icons-and-navbar-container__navbar__list__item {
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+.header__hero {
+  border: 1px solid hsl(0, 0%, 90%);
+  text-align: center;
+  position: absolute;
+  left: 5%;
+  top: 90%;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 2rem 0;
+}
+.header__hero__logo {
+  position: absolute;
+  width: 20%;
+  top: -11%;
+  left: 40%;
+}
+.header__hero__description {
+  padding: 1rem;
+}
+.header__hero__description__title {
+  margin-bottom: 1rem;
+  font-size: 1.325rem;
+}
+.header__hero__description__about-project {
+  font-size: 0.8rem;
+}
+.header__hero__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header__hero__buttons__back-this-project-button {
+  align-self: stretch;
+  padding: 0 1.5rem;
+  border-radius: 50px;
+  border: none;
+  background-color: hsl(176, 50%, 47%);
+  color: #fff;
+  font-weight: 700;
+}
+.header__hero__buttons__bookmark-button {
+  align-self: stretch;
+  border: none;
+  background-color: #fff;
+}
+.header__hero__buttons__bookmark-button__bookmark-image {
+  display: block;
+}
+.header__hero__buttons__bookmark-button__bookmark-text {
+  display: none;
+}
+.header__hero__buttons__bookmark-button:hover {
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.119);
+}
+
+.main {
+  margin: 0 5%;
+  padding-bottom: 10%;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 95%);
+}
+.main__stats {
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 5px;
+  background-color: #fff;
+}
+.main__stats .number {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.main__stats .text {
+  font-size: 0.8rem;
+}
+.main__stats__total-backers {
+  border-top: 1px solid hsl(0, 0%, 90%);
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+  width: 50%;
+  margin: 1rem auto;
+  padding: 1rem 0;
+}
+.main__stats__fillup-bar {
+  margin: 2rem 0 1rem;
+  height: 10px;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 90%);
+  position: relative;
+}
+.main__stats__fillup-bar__actual-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 89%;
+  border-radius: 10px;
+  background-color: hsl(176, 50%, 47%);
+}
+.main__about-this-project {
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #fff;
+}
+.main__about-this-project__title-and-description__title {
+  font-size: 1.15rem;
+}
+.main__about-this-project__title-and-description__description {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+.main__about-this-project__cards-container {
+  margin: 1rem 0;
+}
+.main__thanks-for-your-support-card {
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  top: 5%;
+  z-index: 2;
+  max-width: 766px;
+  width: 90%;
+  margin: 0 auto;
+  display: none;
+}
+.main__thanks-for-your-support-card__check-tick-image {
+  margin: 1rem 0;
+}
+.main__thanks-for-your-support-card__description {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+.main__thanks-for-your-support-card__button {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background-color: hsl(176, 50%, 47%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  margin: 1rem;
+}
+
+.card {
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  padding: 1rem 1rem 1.5rem;
+}
+.card__title-and-description__title {
+  font-size: 1rem;
+}
+.card__title-and-description__pledge-amount {
+  font-size: 0.9rem;
+  color: hsl(176, 50%, 47%);
+  font-weight: 500;
+}
+.card__description {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+.card__left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.card__left__amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.card__left__left-text {
+  font-size: 0.9rem;
+}
+.card__button {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  background-color: hsl(176, 50%, 47%);
+  color: #fff;
+  font-weight: 700;
+}
+
+.back-this-project-container {
+  position: absolute;
+  top: 5%;
+  z-index: 2;
+  max-width: 766px;
+  width: 90%;
+  margin: 0 auto;
+  display: none;
+}
+.back-this-project-container__about-this-project {
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #fff;
+}
+.back-this-project-container__about-this-project__title-and-description {
+  position: relative;
+}
+.back-this-project-container__about-this-project__title-and-description__title {
+  font-size: 1.15rem;
+}
+.back-this-project-container__about-this-project__title-and-description__description {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+.back-this-project-container__about-this-project__title-and-description__close-icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.back-this-project-container__about-this-project__title-and-description__close-icon:hover {
+  background: none;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container {
+  position: relative;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  border: 1px solid hsl(0, 0%, 90%);
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .no-reward-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .bamboo-stand-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .black-edition-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .mahogany-special-edition-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .no-reward-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .bamboo-stand-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .black-edition-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .mahogany-special-edition-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .no-reward-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .bamboo-stand-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .black-edition-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .mahogany-special-edition-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .no-reward-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .bamboo-stand-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .black-edition-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .mahogany-special-edition-card-container__radio-input {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .no-reward-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .no-reward-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .no-reward-card-container__radio-input,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .no-reward-card-container__radio-input {
+  top: 1.5rem;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .card,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .card,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .card,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .card {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .card__title-and-description,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .card__title-and-description,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .card__title-and-description,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .card__title-and-description {
+  margin: 1rem 1rem 1rem 2rem;
+  padding-left: 0.5rem;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .card__description,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .card__description,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .card__description,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .card__description {
+  margin: 1rem;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .card__left,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .card__left,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .card__left,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .card__left {
+  margin: 1rem;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .pledge-container,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .pledge-container,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .pledge-container,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .pledge-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 1px solid hsl(0, 0%, 90%);
+  display: none;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .pledge-container .input-wrapper,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .pledge-container .input-wrapper,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .pledge-container .input-wrapper,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .pledge-container .input-wrapper {
+  position: relative;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .pledge-container .input-wrapper input,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .pledge-container .input-wrapper input,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .pledge-container .input-wrapper input,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .pledge-container .input-wrapper input {
+  width: 100%;
+  align-self: stretch;
+  padding: 1rem;
+  padding-left: 2rem;
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 0%);
+  border: 1px solid hsl(0, 0%, 90%);
+  font-weight: 700;
+  border-radius: 50px;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .pledge-container .input-wrapper span,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .pledge-container .input-wrapper span,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .pledge-container .input-wrapper span,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .pledge-container .input-wrapper span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 70%);
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .pledge-container label,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .pledge-container label,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .pledge-container label,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .pledge-container label {
+  grid-column: 1/3;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .pledge-container button,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .pledge-container button,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .pledge-container button,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .pledge-container button {
+  border-radius: 50px;
+  border: none;
+  background-color: hsl(0, 0%, 90%);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: not-allowed;
+}
+.back-this-project-container__about-this-project__cards-container .no-reward-card-container .pledge-container button:hover,
+.back-this-project-container__about-this-project__cards-container .bamboo-stand-card-container .pledge-container button:hover,
+.back-this-project-container__about-this-project__cards-container .black-edition-card-container .pledge-container button:hover,
+.back-this-project-container__about-this-project__cards-container .mahogany-special-edition-card-container .pledge-container button:hover {
+  background-color: hsl(176, 72%, 28%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.selected-reward {
+  border: 1px solid red;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.disabled-button {
+  background-color: hsl(0, 0%, 70%);
+  cursor: not-allowed;
+}
+
+h3:hover,
+h4:hover {
+  color: hsl(176, 50%, 47%);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(176, 72%, 28%);
+  cursor: pointer;
+}
+
+.skip-link,
+.visually-hidden {
+  display: none;
+}
+
+@media (min-width: 375px) {
+  html {
+    font-size: 18.75px;
+  }
+  .back-this-project-overlay__back-this-project-container {
+    width: 90%;
+  }
+}
+@media (min-width: 425px) {
+  html {
+    font-size: 21.25px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 20.5px;
+  }
+  a {
+    font-size: initial;
+  }
+  .header {
+    margin-bottom: 13.5rem;
+  }
+  .header__background-image {
+    height: 70vh;
+  }
+  .header__hero__logo {
+    width: 10%;
+    top: -13%;
+    left: 45%;
+  }
+  .header__hero__buttons {
+    justify-content: space-between;
+    margin-top: 0.75rem;
+  }
+  .header__hero__buttons__bookmark-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 27.5px;
+  }
+  .header__hero__buttons__bookmark-button__bookmark-text {
+    display: block;
+    padding: 0.5rem;
+    color: hsl(0, 0%, 70%);
+    font-weight: bold;
+  }
+  .header__hero {
+    padding: 2rem;
+  }
+  .header__icons-and-navbar-container__logo-and-hamburgur-icons-container__hamburger-icon,
+  .header__icons-and-navbar-container__logo-and-hamburgur-icons-container__close-icon {
+    display: none;
+  }
+  .header__icons-and-navbar-container__navbar {
+    display: block;
+    width: auto;
+    margin: 0;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+  }
+  .header__icons-and-navbar-container__navbar__list {
+    display: flex;
+    gap: 2rem;
+  }
+  .header__icons-and-navbar-container__navbar__list__item {
+    padding: 0.6rem 0;
+    color: #fff;
+  }
+  .header__icons-and-navbar-container__navbar__list > *:nth-last-child(2) {
+    border: none;
+  }
+  .mobile-nav-overlay {
+    display: none;
+  }
+  .main__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+  .main__stats__fillup-bar {
+    grid-column: 1/4;
+  }
+  .main__stats__total-backers {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-left: 1px solid hsl(0, 0%, 90%);
+    border-right: 1px solid hsl(0, 0%, 90%);
+    width: 100%;
+    padding-left: 1.5rem;
+  }
+  .main__stats__days-left {
+    padding-left: 1.5rem;
+  }
+  .main__about-this-project__cards-container .card__description {
+    font-size: 0.8rem;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card__title-and-description {
+    grid-column: 1/3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card__description {
+    grid-column: 1/3;
+  }
+  .card__button {
+    align-self: center;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 22.5px;
+  }
+  .header__background-image {
+    content: url("../images/image-hero-desktop.jpg");
+  }
+  .main {
+    max-width: 766px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header__hero {
+    max-width: 766px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

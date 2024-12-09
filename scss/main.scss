@@ -1,0 +1,219 @@
+// main.scss
+@import "./variables";
+@import "./reset";
+@import "./base";
+@import "./header";
+@import "./mainx";
+// @import "./backThisProjectOverlay";
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.selected-reward {
+  border: 1px solid red;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.disabled-button {
+  background-color: map-get($colors, neutral, xgray);
+  cursor: not-allowed;
+}
+
+h3:hover,
+h4:hover {
+  color: map-get($colors, primary, moderate-cyan);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: map-get($colors, primary, dark-cyan);
+  cursor: pointer;
+}
+
+.skip-link,
+.visually-hidden {
+  display: none;
+}
+
+// media queries
+// 375px and more
+@media (min-width: 375px) {
+  html {
+    font-size: 18.75px;
+  }
+  .back-this-project-overlay {
+    &__back-this-project-container {
+      width: 90%;
+    }
+  }
+}
+
+// 425px and more
+@media (min-width: 425px) {
+  html {
+    font-size: 21.25px;
+  }
+}
+
+// 768px and more
+@media (min-width: 768px) {
+  html {
+    font-size: 20.5px;
+  }
+  a {
+    font-size: initial;
+  }
+  .header {
+    margin-bottom: 13.5rem;
+  }
+  .header__background-image {
+    height: 70vh;
+  }
+  .header__hero__logo {
+    width: 10%;
+    top: -13%;
+    left: 45%;
+  }
+  .header__hero__buttons {
+    justify-content: space-between;
+    margin-top: 0.75rem;
+
+    &__bookmark-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: map-get($colors, neutral, more-dark-gray);
+      border-radius: 27.5px;
+
+      &__bookmark-text {
+        display: block;
+        padding: 0.5rem;
+        color: map-get($colors, neutral, xgray);
+
+        font-weight: bold;
+      }
+    }
+  }
+  .header__hero {
+    padding: 2rem;
+  }
+  .header__icons-and-navbar-container__logo-and-hamburgur-icons-container__hamburger-icon,
+  .header__icons-and-navbar-container__logo-and-hamburgur-icons-container__close-icon {
+    display: none;
+  }
+  .header__icons-and-navbar-container__navbar {
+    display: block;
+    width: auto;
+    margin: 0;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+
+    &__list {
+      display: flex;
+      gap: 2rem;
+      &__item {
+        padding: 0.6rem 0;
+        color: map-get($colors, primary, white);
+      }
+
+      & > *:nth-last-child(2) {
+        border: none;
+      }
+    }
+  }
+
+  .mobile-nav-overlay {
+    display: none;
+  }
+
+  .main {
+    &__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: left;
+
+      &__fillup-bar {
+        grid-column: 1/4;
+      }
+
+      &__total-backers {
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-left: 1px solid map-get($colors, neutral, dark-gray);
+        border-right: 1px solid map-get($colors, neutral, dark-gray);
+        width: 100%;
+        padding-left: 1.5rem;
+      }
+
+      &__days-left {
+        padding-left: 1.5rem;
+      }
+    }
+    &__about-this-project {
+      &__cards-container {
+        .card__description {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__title-and-description {
+      grid-column: 1/3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__description {
+      grid-column: 1/3;
+    }
+    &__button {
+      align-self: center;
+    }
+  }
+}
+
+// 1024px and more
+@media (min-width: 1024px) {
+  html {
+    font-size: 22.5px;
+  }
+  .header__background-image {
+    content: url("../images/image-hero-desktop.jpg");
+  }
+
+  .main {
+    max-width: 766px;
+    margin-left: auto;
+    margin-right: auto;
+    // left: 18%;
+  }
+
+  .header__hero {
+    max-width: 766px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

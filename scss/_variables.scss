@@ -1,0 +1,31 @@
+// variables.scss
+
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap");
+
+$font: (
+  commissioner: "Commissioner",
+);
+
+$font-weights: (
+  commissioner: (
+    regular: 400,
+    medium: 500,
+    bold: 700,
+  ),
+);
+
+// colors
+$colors: (
+  primary: (
+    white: #fff,
+    moderate-cyan: hsl(176, 50%, 47%),
+    dark-cyan: hsl(176, 72%, 28%),
+  ),
+  neutral: (
+    black: hsl(0, 0%, 0%),
+    more-dark-gray: hsl(0, 0%, 95%),
+    dark-gray: hsl(0, 0%, 90%),
+    xgray: hsl(0, 0%, 70%),
+  ),
+);

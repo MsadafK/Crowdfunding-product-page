@@ -1,0 +1,117 @@
+.header {
+  position: relative;
+  margin-bottom: 17.5rem;
+  // background image
+  &__background-image {
+    width: 100%;
+    display: block;
+  }
+  // icons and navbar container
+  &__icons-and-navbar-container {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    z-index: 2;
+    &__logo-and-hamburgur-icons-container {
+      padding: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__hamburger-icon,
+      &__close-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: none;
+      }
+    }
+    // navbar
+    &__navbar {
+      position: absolute;
+      width: 100%;
+      border-radius: 10px;
+      background-color: map-get($colors, primary, white);
+      margin: 1rem 0;
+
+      &__list {
+        & > *:nth-last-child(2) {
+          border-top: 1px solid map-get($colors, neutral, dark-gray);
+          border-bottom: 1px solid map-get($colors, neutral, dark-gray);
+        }
+
+        &__item {
+          padding: 1rem;
+          font-size: 0.8rem;
+        }
+      }
+      display: none;
+    }
+  }
+
+  // hero
+  &__hero {
+    border: 1px solid map-get($colors, neutral, dark-gray);
+    text-align: center;
+    position: absolute;
+    left: 5%;
+    top: 90%;
+    width: 90%;
+    background-color: map-get($colors, primary, white);
+    border-radius: 5px;
+    padding: 2rem 0;
+
+    &__logo {
+      position: absolute;
+      width: 20%;
+      top: -11%;
+      left: 40%;
+    }
+
+    &__description {
+      padding: 1rem;
+
+      &__title {
+        margin-bottom: 1rem;
+        font-size: 1.325rem;
+      }
+
+      &__about-project {
+        font-size: 0.8rem;
+      }
+    }
+    &__buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      &__back-this-project-button {
+        align-self: stretch;
+        padding: 0 1.5rem;
+        border-radius: 50px;
+        border: none;
+        background-color: map-get($colors, primary, moderate-cyan);
+        color: map-get($colors, primary, white);
+        font-weight: map-get($font-weights, commissioner, bold);
+      }
+      &__bookmark-button {
+        align-self: stretch;
+        border: none;
+        background-color: map-get($colors, primary, white);
+        &__bookmark-image {
+          display: block;
+        }
+        &__bookmark-text {
+          display: none;
+        }
+
+        &:hover {
+          background-color: white;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.119);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.back-this-project-container {
+  position: absolute;
+  top: 5%;
+  z-index: 2;
+  max-width: 766px;
+  width: 90%;
+  margin: 0 auto;
+  display: none;
+
+  &__about-this-project {
+    border: 1px solid map-get($colors, neutral, dark-gray);
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: map-get($colors, primary, white);
+    &__title-and-description {
+      position: relative;
+      &__title {
+        font-size: 1.15rem;
+      }
+      &__description {
+        font-size: 0.8rem;
+        margin: 1rem 0;
+      }
+      &__close-icon {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      &__close-icon:hover {
+        background: none;
+      }
+    }
+
+    &__cards-container {
+      .no-reward-card-container,
+      .bamboo-stand-card-container,
+      .black-edition-card-container,
+      .mahogany-special-edition-card-container {
+        position: relative;
+        border-radius: 5px;
+        margin: 1.5rem 0;
+        border: 1px solid map-get($colors, neutral, dark-gray);
+
+        .no-reward-card-container__radio-input,
+        .bamboo-stand-card-container__radio-input,
+        .black-edition-card-container__radio-input,
+        .mahogany-special-edition-card-container__radio-input {
+          position: absolute;
+          top: 2rem;
+          left: 1rem;
+        }
+
+        .no-reward-card-container__radio-input {
+          top: 1.5rem;
+        }
+
+        .card {
+          margin: 0;
+          padding: 0;
+          border: none;
+
+          &__title-and-description {
+            margin: 1rem 1rem 1rem 2rem;
+            padding-left: 0.5rem;
+          }
+
+          &__description {
+            margin: 1rem;
+          }
+
+          &__left {
+            margin: 1rem;
+          }
+        }
+
+        .pledge-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          padding: 1rem;
+          border-top: 1px solid map-get($colors, neutral, dark-gray);
+          display: none;
+
+          .input-wrapper {
+            position: relative;
+
+            input {
+              width: 100%;
+              align-self: stretch;
+              padding: 1rem;
+              padding-left: 2rem;
+              font-size: 0.8rem;
+              color: map-get($colors, neutral, black);
+              border: 1px solid map-get($colors, neutral, dark-gray);
+              font-weight: map-get($font-weights, commissioner, bold);
+              border-radius: 50px;
+            }
+
+            span {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 1rem;
+              font-size: 0.8rem;
+              font-weight: map-get($font-weights, commissioner, bold);
+              color: map-get($colors, neutral, xgray);
+            }
+          }
+
+          label {
+            grid-column: 1/3;
+            text-align: center;
+            font-size: 0.8rem;
+          }
+
+          button {
+            border-radius: 50px;
+            border: none;
+            background-color: map-get($colors, neutral, dark-gray);
+            color: map-get($colors, primary, white);
+            font-size: 0.8rem;
+            font-weight: map-get($font-weights, commissioner, bold);
+            cursor: not-allowed;
+          }
+
+          button:hover {
+            background-color: map-get($colors, primary, dark-cyan);
+          }
+        }
+      }
+    }
+  }
+}

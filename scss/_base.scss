@@ -1,0 +1,6 @@
+// base.scss
+
+body {
+  background-color: map-get($colors, neutral, more-dark-gray);
+  position: relative;
+}
